@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Piano Application</title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script src="https://unpkg.com/tone"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    </head>
+
+    <body>
+        <div id="controlDiv">
+            <div class="controlSubDiv">
+                <label for="tunesDrop">Tune:</label>
+                <select name="tunes" id="tunesDrop"></select>
+                <button id="tunebtn" onclick="PlayButton()">
+                    <img
+                        class="controlimg"
+                        src="public/play.png"
+                        alt="Play the selected tune."
+                    />
+                </button>
+            </div>
+            <div class="controlSubDiv">
+                <label for="recordbtn">Record:</label>
+                <button id="recordbtn">
+                    <img
+                        class="controlimg"
+                        src="public/record.png"
+                        alt="Record a new tune."
+                    />
+                </button>
+                <button id="stopbtn" disabled onclick="displayInput()">
+                    <img
+                        class="controlimg"
+                        src="public/stop.png"
+                        alt="Stop recording of tune."
+                    />
+                </button>
+                <input
+                    type="text"
+                    id="recordName"
+                    name="recordName"
+                    placeholder="Tune name"
+                />
+            </div>
+        </div>
+        <script src="index.js"></script>
+        <br /><br />
+        <div id="keyboardDiv">
+            <button id="c4" class="whitebtn" onclick="PlayTune('c4')">
+                C4<br />
+                (a)</button
+            ><button id="c#4" class="blackbtn" onclick="PlayTune('c#4')">
+                C#4<br />
+                (w)</button
+            ><button id="d4" class="whitebtn" onclick="PlayTune('d4')">
+                D4<br />
+                (s)</button
+            ><button id="d#4" class="blackbtn" onclick="PlayTune('d#4')">
+                D#4<br />
+                (e)</button
+            ><button id="e4" class="whitebtn" onclick="PlayTune('e4')">
+                E4<br />
+                (d)</button
+            ><button id="f4" class="whitebtn" onclick="PlayTune('f4')">
+                F4<br />
+                (f)</button
+            ><button id="f#4" class="blackbtn" onclick="PlayTune('f#4')">
+                F#4<br />
+                (t)</button
+            ><button id="g4" class="whitebtn" onclick="PlayTune('g4')">
+                G4<br />
+                (g)</button
+            ><button id="g#4" class="blackbtn" onclick="PlayTune('g#4')">
+                G#4<br />
+                (y)</button
+            ><button id="a4" class="whitebtn" onclick="PlayTune('a4')">
+                A4<br />
+                (h)</button
+            ><button id="bb4" class="blackbtn" onclick="PlayTune('bb4')">
+                Bb4<br />
+                (u)</button
+            ><button id="b4" class="whitebtn" onclick="PlayTune('b4')">
+                B4<br />
+                (j)</button
+            ><button id="c5" class="whitebtn" onclick="PlayTune('c5')">
+                C5<br />
+                (k)</button
+            ><button id="c#5" class="blackbtn" onclick="PlayTune('c#5')">
+                C#5<br />
+                (o)</button
+            ><button id="d5" class="whitebtn" onclick="PlayTune('d5')">
+                D5<br />
+                (l)</button
+            ><button id="d#5" class="blackbtn" onclick="PlayTune('d#5')">
+                D#5<br />
+                (p)</button
+            ><button id="e5" class="whitebtn" onclick="PlayTune('e5')">
+                E5<br />
+                (;)
+            </button>
+        </div>
+        <div id="tooSmallWarning">
+            <img
+                id="oopsimg"
+                src="public/oops.jpg"
+                alt="An image saying oops."
+            />
+            <p>This website requires at least 600px screen width.</p>
+        </div>
+        <script src="app.js"></script>
+    </body>
+</html>
